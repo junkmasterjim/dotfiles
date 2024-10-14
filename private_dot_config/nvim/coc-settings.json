@@ -1,0 +1,12 @@
+{
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.jsxSingleQuote": false,
+  "coc.preferences.extensionUpdateCheck": ["coc-html", "coc-emmet"],
+  "eslint.autoFixOnSave": true,
+
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "prettier.formatterPriority": 1,
+  "coc.preferences.formatOnType": true
+}
