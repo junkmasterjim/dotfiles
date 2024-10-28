@@ -41,6 +41,9 @@ keymap('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Toggle transparency
 keymap('n', '<leader>tt', ':TransparentToggle<CR>', { noremap = true, silent = true })
 
+-- Toggle HTML Live Server
+keymap('n', '<leader>ll', ':LiveServerStart<CR>', { desc = '[L]iveServer start', noremap = true, silent = true })
+keymap('n', '<leader>ls', ':LiveServerStop<CR>', { desc = '[L]iveServer [s]top', noremap = true, silent = true })
 
 -- Diagnostic keymaps
 keymap('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })

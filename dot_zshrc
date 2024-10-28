@@ -38,8 +38,12 @@ alias nvimconfig='v ~/.config/nvim/init.lua'
 alias zshconfig='v ~/.zshrc'
 alias ohmyzsh='v ~/.oh-my-zsh'
 
-# alias to exit terminal with :q
+# alias to exit terminal with :q or q
 alias :q='exit'
+alias q='exit'
+
+# alias to get ip with ipconfig
+alias whatsmyip='echo Public IP Address: && curl ifconfig.me && echo \\n && echo Wireless address: && ipconfig getifaddr en0 && echo Ethernet address: && ipconfig getifaddr en1'
 
 # alias for nvim to be just vim cmd
 alias vi='nvim'
