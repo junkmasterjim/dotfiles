@@ -38,6 +38,10 @@ alias nvimconfig='v ~/.config/nvim/init.lua'
 alias zshconfig='v ~/.zshrc'
 alias ohmyzsh='v ~/.oh-my-zsh'
 
+# aliases for yabai
+alias yabai-start="yabai --start-service && skhd --start-service"
+alias yabai-stop="yabai --stop-service && skhd --stop-service"
+
 # alias to exit terminal with :q or q
 alias :q='exit'
 alias q='exit'
