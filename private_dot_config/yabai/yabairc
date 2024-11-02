@@ -28,8 +28,9 @@ yabai -m config mouse_action2 resize
 
 # disabled apps 
 yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^paint$" manage=off
 
+# borders
+borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0 &
