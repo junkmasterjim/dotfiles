@@ -118,21 +118,18 @@ require('lazy').setup({
    "xiyaowong/transparent.nvim",
 
     opts = {
-      exclude_groups = {'StatusLine', 'StatusLineNC'}
-    }
+      exclude_groups = {'StatusLine', 'StatusLineNC',}
+    },
   },
 
   {
-    -- "bettervim/yugen.nvim",
-    -- "slugbyte/lackluster.nvim",
-    'ellisonleao/gruvbox.nvim',
+    'slugbyte/lackluster.nvim',
+    name = "lackluster",
     priority = 1000,
     config = function()
-      -- vim.o.background = 'dark'
+      vim.o.background = 'dark'
 
-      -- vim.cmd [[colorscheme yugen]]
-      -- vim.cmd [[colorscheme lackluster]]
-      vim.cmd [[colorscheme gruvbox]]
+      vim.cmd [[colorscheme lackluster-night]]
       vim.cmd.hi 'Comment gui=none'
     end,
   },

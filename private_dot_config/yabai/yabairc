@@ -1,3 +1,7 @@
+# load scripting addition when yabai starts
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
 # restart simple-bar when yabai restarts
 osascript -e 'tell application id "tracesOf.Uebersicht" to refresh'
 
@@ -28,9 +32,23 @@ yabai -m config mouse_action2 resize
 
 # disabled apps 
 yabai -m rule --add app="^System Settings$" manage=off
-yabai -m rule --add app="^Finder$" manage=off
 yabai -m rule --add app="^Raycast$" manage=off
 yabai -m rule --add app="^paint$" manage=off
+yabai -m rule --add app="^Screen Studio$" manage=off
 
-# borders
-borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=4.0 &
+# borders with jankyborders
+# borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=8.0 &
+
+#opacity (needs SIP disabled)
+yabai -m config window_opacity on
+yabai -m config window_opacity_duration 0.0
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.9
+
+# space names
+yabai -m space 1 --label dev
+yabai -m space 2 --label web
+yabai -m space 3 --label comms
+yabai -m space 4 --label music
+yabai -m space 5 --label etc
+
