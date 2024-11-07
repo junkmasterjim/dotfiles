@@ -1,21 +1,9 @@
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="cloud"
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
+# Path to your Oh My Zsh installation.
+ZSH_THEME="arrow"
 zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
 
 # Which plugins would you like to load?
 plugins=(
@@ -26,9 +14,13 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
+# exports
 
-# You may need to manually set your language environment
 export LANG=en_US.UTF-8
+export EDITOR="nvim"
+export CPATH=/opt/homebrew/include # clang
+export LIBRARY_PATH=/opt/homebrew/lib # clang
+export ANTHROPIC_API_KEY=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
 
 # Put aliases below
 # You can check which aliases are currently active by running 'alias'
@@ -38,20 +30,13 @@ alias nvimconfig='v ~/.config/nvim/init.lua'
 alias zshconfig='v ~/.zshrc'
 alias ohmyzsh='v ~/.oh-my-zsh'
 
-# aliases for yabai
 alias yabai-start="yabai --start-service && skhd --start-service"
 alias yabai-stop="yabai --stop-service && skhd --stop-service"
 
-# alias to exit terminal with :q or q
 alias :q='exit'
 alias q='exit'
 
-# alias to get ip with ipconfig
-alias whatsmyip='echo Public IP Address: && curl ifconfig.me && echo \\n && echo Wireless address: && ipconfig getifaddr en0 && echo Ethernet address: && ipconfig getifaddr en1'
-
-# alias for nvim to be just vim cmd
-alias vi='nvim'
-alias vim='nvim'
+# v alias for nvim
 alias v='nvim'
 
 # run python3 with python or py
