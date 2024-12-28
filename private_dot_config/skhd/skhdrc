@@ -29,9 +29,6 @@ shift + alt - down : yabai -m window --swap south
 shift + alt - left : yabai -m window --swap west
 shift + alt - right : yabai -m window --swap east
 
-# move winodw to prev and next space 
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
 
 # move window to space number #
 shift + alt - 1: yabai -m window --space 1;

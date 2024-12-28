@@ -1,4 +1,6 @@
-  return {
+
+
+return  {
     'yacineMTB/dingllm.nvim',
     dependencies = { 'nvim-lua/plenary.nvim' },
     config = function()
@@ -10,7 +12,7 @@
       local function anthropic_help()
         dingllm.invoke_llm_and_stream_into_editor({
           url = 'https://api.anthropic.com/v1/messages',
-          model = 'claude-3-5-sonnet-20240620',
+          model = 'claude-3-5-sonnet-20241022',
           api_key_name = 'ANTHROPIC_API_KEY',
           system_prompt = helpful_prompt,
           replace = false,
@@ -20,7 +22,7 @@
       local function anthropic_replace()
         dingllm.invoke_llm_and_stream_into_editor({
           url = 'https://api.anthropic.com/v1/messages',
-          model = 'claude-3-5-sonnet-20240620',
+          model = 'claude-3-5-sonnet-20241022',
           api_key_name = 'ANTHROPIC_API_KEY',
           system_prompt = system_prompt,
           replace = true,

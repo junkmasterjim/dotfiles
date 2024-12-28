@@ -1,39 +1,41 @@
+local opt = vim.opt
+local keymap = vim.keymap.set
+
 -- Basic settings
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 vim.g.have_nerd_font = true
 
 -- Options
-vim.opt.shortmess = "I"
-vim.opt.number = true
-vim.opt.relativenumber = false
-vim.opt.mouse = 'a'
-vim.opt.textwidth = 80
-vim.opt.showmode = false
-vim.opt.clipboard = 'unnamedplus'
-vim.opt.breakindent = true
-vim.opt.undofile = true
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.signcolumn = 'yes'
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
-vim.opt.splitright = true
-vim.opt.splitbelow = true
-vim.opt.list = true
-vim.opt.listchars = {tab = '··', trail = '·', nbsp = '␣' }
-vim.opt.inccommand = 'split'
-vim.opt.cursorline = true
-vim.opt.scrolloff = 10
-vim.opt.hlsearch = true
+opt.shortmess = "I"
+opt.number = true
+opt.relativenumber = false
+opt.mouse = 'a'
+opt.textwidth = 80
+opt.showmode = false
+opt.clipboard = 'unnamedplus'
+opt.breakindent = true
+opt.undofile = true
+opt.ignorecase = true
+opt.smartcase = true
+opt.signcolumn = 'yes'
+opt.updatetime = 250
+opt.timeoutlen = 300
+opt.splitright = true
+opt.splitbelow = true
+opt.list = true
+opt.listchars = {tab = '··', trail = '·', lead = '.' }
+opt.inccommand = 'split'
+opt.cursorline = true
+opt.scrolloff = 10
+opt.hlsearch = true
 
-vim.opt.tabstop = 2
-vim.opt.expandtab = true
-vim.opt.shiftwidth = 2
-vim.opt.autoindent = true
+opt.tabstop = 2
+opt.expandtab = true
+opt.shiftwidth = 2
+opt.autoindent = true
 
 -- Keymaps
-local keymap = vim.keymap.set
 
 keymap('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
@@ -51,11 +53,17 @@ keymap('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic me
 keymap('n', '<leader>e', vim.diagnostic.open_float, { desc = 'Show diagnostic [E]rror messages' })
 keymap('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
 
+-- Use h,j,k,l to navigate
+keymap('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
+keymap('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
+keymap('n', '<up>', '<cmd>echo "Use k to move!!"<CR>')
+keymap('n', '<down>', '<cmd>echo "Use j to move!!"<CR>')
+
 -- Window navigation
-keymap('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
-keymap('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
-keymap('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
-keymap('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+keymap('n', '<C-Left>', '<C-w><C-h>', { desc = 'Move focus to the left window' })
+keymap('n', '<C-Right>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
+keymap('n', '<C-Down>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
+keymap('n', '<C-Up>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
 -- Autocommands
 vim.api.nvim_create_autocmd('TextYankPost', {
@@ -84,7 +92,6 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- Quality of life plugins
   'tpope/vim-sleuth',
-  'neoclide/coc.nvim',
   'numToStr/Comment.nvim',
   'lukas-reineke/indent-blankline.nvim',
   'windwp/nvim-autopairs',
@@ -121,6 +128,8 @@ require('lazy').setup({
       exclude_groups = {'StatusLine', 'StatusLineNC',}
     },
   },
+
+  {'catppuccin/nvim'},
 
   {
     'slugbyte/lackluster.nvim',

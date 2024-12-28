@@ -2540,7 +2540,7 @@ remember_window_size    yes
 # END KITTY_WINDOW_LAYOUT
 
 # BEGIN_KITTY_THEME
-# Black Metal
+# Selenized Black
 include current-theme.conf
 # END_KITTY_THEME
 
