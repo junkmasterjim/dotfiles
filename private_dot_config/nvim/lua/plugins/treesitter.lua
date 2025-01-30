@@ -1,4 +1,4 @@
-local M = {
+return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   opts = {
@@ -20,5 +20,3 @@ local M = {
     require('nvim-treesitter.configs').setup(opts)
   end,
 }
-
-return M

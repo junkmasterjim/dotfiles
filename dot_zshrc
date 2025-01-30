@@ -17,10 +17,10 @@ source $ZSH/oh-my-zsh.sh
 # exports
 
 export LANG=en_US.UTF-8
+export VISUAL="nvim"
 export EDITOR="nvim"
 export CPATH=/opt/homebrew/include # clang
 export LIBRARY_PATH=/opt/homebrew/lib # clang
-export ANTHROPIC_API_KEY=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
 
 # Put aliases below
 # You can check which aliases are currently active by running 'alias'
@@ -36,16 +36,16 @@ alias yabai-stop="yabai --stop-service && skhd --stop-service"
 alias :q='exit'
 alias q='exit'
 
+# r alias for ranger
+alias r='. ranger'
+
 # v alias for nvim
 alias v='nvim'
+
+# alias for kitten ssh
+alias s='kitten ssh'
 
 # run python3 with python or py
 alias py='python3'
 alias python='python3'
 
-# homebrew paths (for clang)
-export CPATH=/opt/homebrew/include
-export LIBRARY_PATH=/opt/homebrew/lib
-
-# api keys
-export ANTHROPIC_API_KEY=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
